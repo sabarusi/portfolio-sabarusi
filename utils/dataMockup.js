@@ -26,8 +26,8 @@ export const featuredData =[
         desc:"This personal portfolio was created with NextJS and Tailwind CSS for styling. Effects are provided by Framer Motion. It's generated statically and the data comes from .json files at build. You should check it some time.",
         img:"/assets/img/portfolio.png",
         tech:["NextJS", "Tailwind CSS", "FramerMotion", "SSG"],
-        links:{github:"",
-               deploy:""}
+        links:{github:"github.com/sabarusi/",
+               deploy:"/"}//provisory github link
     }
 ]
 export const miscData=[

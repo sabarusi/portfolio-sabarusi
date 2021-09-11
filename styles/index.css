@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "@fontsource/plus-jakarta-sans";
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+html, body, #root{
+   height:"100%";
+}
+
+@layer utilities {
+  .snap {
+    scroll-snap-type: y mandatory;
+  }
+  .snap-start {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+.text-stroke{
+    -webkit-text-stroke-width: 1.6px;
+}
+.stroke-color-indigo{
+    -webkit-text-stroke-color: rgb(79, 70, 229);
+}
+.stroke-color-white{
+    -webkit-text-stroke-color: white;
+}

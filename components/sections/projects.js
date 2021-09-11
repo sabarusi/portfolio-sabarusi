@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { FaAt, FaGithub } from 'react-icons/fa'
 import AnimateWhenVisible from '../animateWhenVisible'
 
-export const Projects = ({featured, misc}) => {
+export default function Projects({featured, misc}){
     return <section id="projects" className="projects">
                 <div className="flex flex-col min-h-screen bg-primary relative">
                 {featured.map((e) => 
@@ -24,7 +24,6 @@ export const Projects = ({featured, misc}) => {
                 </div>
             </section>
 }
-
 
 const MainItem = ({name, desc, tech, links,img, id ,tag}) => {
     return <article className="project snap-start flex flex-col text-center max-w-screen min-h-screen py-2 sm:py-10">

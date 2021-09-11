@@ -1,14 +1,13 @@
 import React from 'react'
 
 
-export const Marquee = ({text})=>{
+export default function Marquee({text}){
    return <section className="marquee min-h-screen snap-start z-0 flex flex-col space-y-0 bg-primary font-raleway align-middle py-52">
             <MarqueeLine text={text}/>
             <MarqueeLine text={text} stroke={true} strokeColor={"indigo"}/>
             <MarqueeLine text={text}/>
          </section>
 }
-
 
 const MarqueeLine = ({text, stroke, strokeColor="white"}) => {
     

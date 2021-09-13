@@ -6,6 +6,7 @@ const About = dynamic(()=> import("../components/sections/about"))
 import { Hero } from '../components/sections/hero'
 import { featuredData, miscData } from '../data/projectsData'
 import Navbar from '../components/layout/navbar'
+import { descriptionAbout } from '../data/aboutData'
 
 export default function Home(props) {
   return (

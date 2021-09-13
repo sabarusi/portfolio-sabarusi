@@ -9,7 +9,7 @@ export default function Projects({featured, misc, locale}){
                 </section>
                 <section id="misc" className="flex flex-col snap-start min-h-screen w-screen bg-primary justify-center items-center pt-10">
                     <Header id={"misc"}/>
-                    <div className="flex flex-col w-11/12 space-y-6 py-4 md:py-2 md:space-y-0 flex-1 md:justify-center items-center md:flex-row">
+                    <div className="flex flex-col w-11/12 space-y-3 py-2 md:space-y-0 flex-1 md:justify-center items-center md:flex-row">
                         {misc.map( e=> <Misc locale={locale} key={e.id} {...e}/>)}
                     </div>
                 </section>
@@ -19,7 +19,7 @@ export default function Projects({featured, misc, locale}){
 const Featured = ({...props}) =>{
     return <article className="project snap-start flex flex-col text-center max-w-screen min-h-screen py-2 sm:py-10">
                 <Header id={props.id}/>
-                <div className="flex flex-col py-2 flex-1 sm:items-center justify-between sm:justify-center">
+                <div className="flex flex-col py-2 flex-1 items-center justify-between sm:justify-center">
                     <Card {...props} />
                 </div>
             </article>

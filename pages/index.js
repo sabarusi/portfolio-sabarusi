@@ -2,7 +2,7 @@ import Head from 'next/head'
 import dynamic from "next/dynamic"
 const Projects = dynamic(() => import("../components/sections/projects/projects"))
 const Marquee  = dynamic(() => import("../components/marquee"))
-import About from '../components/sections/about'
+const About = dynamic(()=> import("../components/sections/about"))
 import { Hero } from '../components/sections/hero'
 import { featuredData, miscData } from '../utils/dataMockup'
 

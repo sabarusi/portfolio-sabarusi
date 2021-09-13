@@ -5,7 +5,7 @@ const Marquee  = dynamic(() => import("../components/marquee"))
 const About = dynamic(()=> import("../components/sections/about"))
 import { Hero } from '../components/sections/hero'
 import { featuredData, miscData } from '../data/projectsData'
-import { Navbar } from '../components/layout/navbar'
+import Navbar from '../components/layout/navbar'
 
 export default function Home(props) {
   return (
@@ -24,7 +24,7 @@ export default function Home(props) {
         <Projects featured={props.featured} locale={props.locale} misc={props.misc} />
 
         <Marquee text={"ABOUT"}/>
-        <About locale={props.locale} />
+        <About desc={props.desc} />
 
       </main>
   </>
@@ -35,7 +35,8 @@ export async function getStaticProps({locale}) {
   const itemLocale = (e) => {return {...e, desc:e.desc[locale]}}
   const featured = featuredData.map(e=>itemLocale(e))
   const misc = miscData.map(e=>itemLocale(e))
+  const desc = descriptionAbout[locale]
   return {
-    props: {featured, misc, locale},  
+    props: {featured, misc, desc, locale},  
   }
 }

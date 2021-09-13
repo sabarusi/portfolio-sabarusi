@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Flag } from './flag'
 
-export const Navbar = ({locale}) => {
+export default function Navbar({locale}){
     return (
         <nav className="bg-transparent z-50 w-screen h-max flex justify-end sm:px-5 fixed">
             <div className="flex h-full space-x-1.5 p-2">
@@ -14,6 +14,7 @@ export const Navbar = ({locale}) => {
         </nav>
     )
 }
+
 const NavItem = ({to, children})=>{
     return <Link href={to} replace>
             <a>

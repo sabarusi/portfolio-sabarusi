@@ -8,7 +8,8 @@ export const Flag = ({country})=>{
                     <Image alt={`${flagIcon} lang`} 
                            src={"/assets/img/"+flagIcon+".png"}
                            width={32}
-                           height={32} />
+                           height={32}
+                           priority={true} />
                 </a>
             </Link>
 }

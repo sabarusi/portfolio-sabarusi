@@ -2,15 +2,15 @@ import React from 'react'
 import { Card } from './card/card'
 import { Header } from './header'
 
-export default function Projects({featured, misc}){
+export default function Projects({featured, misc, locale}){
     return <section id="projects" className="projects">
                 <section id="featured" className="flex flex-col min-h-screen bg-primary relative">
-                    {featured.map((e) => <Featured key={e.id}{...e}/>)}
+                    {featured.map((e) => <Featured locale={locale} key={e.id}{...e}/>)}
                 </section>
                 <section id="misc" className="flex flex-col snap-start min-h-screen w-screen bg-primary justify-center items-center pt-10">
                     <Header id={"misc"}/>
                     <div className="flex flex-col w-11/12 space-y-6 py-4 md:py-2 md:space-y-0 flex-1 md:justify-center items-center md:flex-row">
-                        {misc.map( e=> <Misc key={e.id} {...e}/>)}
+                        {misc.map( e=> <Misc locale={locale} key={e.id} {...e}/>)}
                     </div>
                 </section>
             </section>

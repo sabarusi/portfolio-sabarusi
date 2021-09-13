@@ -1,13 +1,15 @@
 import React from 'react'
 import Link from 'next/link'
+import { Flag } from './flag'
 
-export const Navbar = () => {
+export const Navbar = ({locale}) => {
     return (
         <nav className="bg-transparent z-50 w-screen h-max flex justify-end sm:px-5 fixed">
             <div className="flex h-full space-x-1.5 p-2">
                 <NavItem to="/#home">Home</NavItem>
-                <NavItem to="/#projects">Proyectos</NavItem>
+                <NavItem to="/#projects">{locale === "es"?"Proyectos": "Projects"}</NavItem>
                 <NavItem to="/#about">About</NavItem>
+                <Flag country={locale}/>
             </div>
         </nav>
     )

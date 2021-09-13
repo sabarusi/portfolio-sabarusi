@@ -6,7 +6,7 @@ import {Description} from "./description"
 import {ProjectImg} from "./projectImg"
 import {TechStack} from "./tech"
 
-export const Card =({name, desc, tech, links,img, tag, isSmall}) => {
+export const Card =({name, desc, tech, links,img, tag, isSmall, locale}) => {
     const cardStyle = !isSmall ? "card shadow-purple w-19/20 lg:w-full max-w-4xl p-3 py-5 sm:py-0 rounded-lg"
                                : "card shadow-purple h-full max-w-sm md:max-w-md lg:max-w-lg p-4 rounded-lg"
     return <AnimateWhenVisible style={cardStyle}

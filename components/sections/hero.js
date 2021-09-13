@@ -38,7 +38,7 @@ return <AnimateWhenVisible style="flex sm:w-80 sm:h-max items-center justify-cen
                            variants={{visible: { opacity: 1, scale:1 },
                                       hidden: { opacity: 0,  scale:0.5 }
                                      }}
-                            transition= {{duration:0.6}}>
+                            transition= {{duration:0.5}}>
                 <Image
                     src={heroImg}
                     alt="Coding screen"
